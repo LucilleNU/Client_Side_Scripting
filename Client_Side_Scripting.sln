@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.808.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Javascript_Intro", "01Javascript_Intro\01Javascript_Intro.csproj", "{1B3E22C9-5D80-46B9-87A0-B984B0DD770E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML_Basics", "HTML_Basics\HTML_Basics.csproj", "{306B1264-BDEE-44F9-8AB9-033C42F23509}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1B3E22C9-5D80-46B9-87A0-B984B0DD770E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B3E22C9-5D80-46B9-87A0-B984B0DD770E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B3E22C9-5D80-46B9-87A0-B984B0DD770E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
