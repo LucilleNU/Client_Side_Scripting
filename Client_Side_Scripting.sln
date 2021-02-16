@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Javascript_Intro", "01Jav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML_Basics", "HTML_Basics\HTML_Basics.csproj", "{306B1264-BDEE-44F9-8AB9-033C42F23509}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic_css", "Basic_css\Basic_css.csproj", "{35102A43-FB49-42ED-8985-0C18348F1B0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{306B1264-BDEE-44F9-8AB9-033C42F23509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35102A43-FB49-42ED-8985-0C18348F1B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35102A43-FB49-42ED-8985-0C18348F1B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35102A43-FB49-42ED-8985-0C18348F1B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35102A43-FB49-42ED-8985-0C18348F1B0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
