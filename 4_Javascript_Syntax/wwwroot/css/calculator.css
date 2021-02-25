@@ -1,99 +1,63 @@
-﻿body {
-    font-family: 'Open Sans',sans-serif;
-    background-color: black;
+﻿@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+.calc {
+    background: #f8f4e5;
+    padding: 50px 100px;
+    border: 2px solid rgba(0,0,0,1);
+    box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px rgba(0,0,0,1);
 }
 
-#container {
-    width: 1000px;
-    height: 550px;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg);
-    margin: 20px auto;
+
+body {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg");
+    center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
-#calculator {
-    width: 320px;
-    height: 520px;
-    background-color: #eaedef;
+input {
+    display: block;
+    width: 100%;
+    font-size: 14pt;
+    line-height: 28pt;
+    font-family: Fjalla One;
+    margin-bottom: 28pt;
+    border: none;
+    border-bottom: 5px solid rgba(0,0,0,1);
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: rgba(0,0,0,1);
+}
+
+    input:focus {
+        border-bottom: 5px solid #ffa580;
+    }
+
+button {
+    display: block;
     margin: 0 auto;
-    top: 20px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: 28pt;
+    padding: 0 20px;
+    background: #ffa580;
+    letter-spacing: 2px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,1);
+    box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px rgba(0,0,0,1)
 }
 
-#result {
-    height: 120px;
+button:hover {
+    background: rgba(0,0,0,1);
+    color: white;
+    border: 1px solid rgba(0,0,0,1);
 }
 
-#history {
-    text-align: right;
-    height: 20px;
-    margin: 0 20px;
-    padding-top: 20px;
-    font-size: 15px;
-    color: #919191;
+::selection {
+    background: #ffc8ff;
 }
-
-#output {
-    text-align: right;
-    height: 60px;
-    margin: 10px 20px;
-    font-size: 30px;
-}
-
-#keyboard {
-    height: 400px;
-}
-
-.operator, .number, .empty {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-    float: left;
-    border-radius: 50%;
-    border-width: 0;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.number, .empty {
-    background-color: #eaedef;
-}
-
-.number, .operator {
-    cursor: pointer;
-}
-
-    .operator:active, .number:active {
-        font-size: 13px;
-    }
-
-    .operator:focus, .number:focus, .empty:focus {
-        outline: 0;
-    }
-
-button:nth-child(4) {
-    font-size: 20px;
-    background-color: #20b2aa;
-}
-
-button:nth-child(8) {
-    font-size: 20px;
-    background-color: #ffa500;
-}
-
-button:nth-child(12) {
-    font-size: 20px;
-    background-color: #f08080;
-}
-
-button:nth-child(16) {
-    font-size: 20px;
-    background-color: #7d93e0;
-}
-
-button:nth-child(20) {
-    font-size: 20px;
-    background-color: #9477af;
-}
-
+  

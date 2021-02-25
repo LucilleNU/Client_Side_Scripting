@@ -1,48 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link href="css/calculator.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
-        <title>Simple Calculator</title>
-    </head>
-    <body>
-        <div id="container">
-            <div id="calculator">
-                <div id="result">
-                    <div id="history">
-                        <p id="history-value"></p>
-                    </div>
-                    <div id="output">
-                        <p id="output-value"></p>
-                    </div>
-                </div>
-                <div id="keyboard">
-                    <button class="operator" id="clear">C</button>
-                    <button class="operator" id="backspace">CE</button>
-                    <button class="operator" id="%">%</button>
-                    <button class="operator" id="/">&#247;</button>
-                    <button class="number" id="7">7</button>
-                    <button class="number" id="8">8</button>
-                    <button class="number" id="9">9</button>
-                    <button class="operator" id="*">&times;</button>
-                    <button class="number" id="4">4</button>
-                    <button class="number" id="5">5</button>
-                    <button class="number" id="6">6</button>
-                    <button class="operator" id="-">-</button>
-                    <button class="number" id="1">1</button>
-                    <button class="number" id="2">2</button>
-                    <button class="number" id="3">3</button>
-                    <button class="operator" id="+">+</button>
-                    <button class="empty" id="empty"></button>
-                    <button class="number" id="0">0</button>
-                    <button class="empty" id="empty"></button>
-                    <button class="operator" id="=">=</button>
-                </div>
-            </div>
-        </div>
-        <script src="js/calculator.js"></script>
-    </body>
-</html>
+<head>
+    <meta charset="utf-8" />
+    <link href="css/calculator.css" rel="stylesheet" />
+    <script src="js/calculator.js"></script>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <form id="calc">
+        <p>Enter First Number :</p>
+        <input id="num1" name="TextBox1">
+        <br>
 
+        <p>Enter Second Number :</p>
+        <input id="num2" name="TextBox2"><br />
+
+        <p>Enter Operator ( either +, -, * or / ):</p>
+        <input id="operator" name="TextBox2"><br />
+        <br />
+
+        <button type="button" onclick="Calculate()">Result</button>
+        <br />
+        <div id="results"><input name="TextBox3"></div>
+    </form>
+</body>
+</html>
 
