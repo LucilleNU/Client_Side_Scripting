@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Basic_css", "3_Basic_css\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_Javascript_Syntax", "4_Javascript_Syntax\4_Javascript_Syntax.csproj", "{1E908C19-4B99-42E7-B74A-723A1905BDC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Javascript_Functions", "5_Javascript_Functions\5_Javascript_Functions.csproj", "{550AB723-1A13-4CDC-BB88-E2047041FAE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1E908C19-4B99-42E7-B74A-723A1905BDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E908C19-4B99-42E7-B74A-723A1905BDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E908C19-4B99-42E7-B74A-723A1905BDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
