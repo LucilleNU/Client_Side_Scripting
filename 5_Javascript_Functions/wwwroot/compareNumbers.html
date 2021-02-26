@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Compare Numbers</title>
+</head>
+<body>
+    <form id="calc">
+        <p>Enter First Number :</p>
+        <input id="num1" name="TextBox1">
+        <br>
+
+        <p>Enter Second Number :</p>
+        <input id="num2" name="TextBox2">
+        <br />
+        <br />
+
+        <select id="operator">
+            <option value="+">Sum(+)</option>
+            <option value="*">Multiplication(*)</option>
+            <option value="<">Minumum Number</option>
+            <option value=">">Maximum Number</option>
+        </select>
+
+        <button type="button" onclick="computeNumbers()">Result</button>
+        <br />
+        <br/>
+        <div id="results"></div>
+    </form>
+    <script src="js/compareNumbers.js"></script>
+</body>
+</html>
