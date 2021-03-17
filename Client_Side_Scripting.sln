@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_Javascript_Syntax", "4_Ja
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Javascript_Functions", "5_Javascript_Functions\5_Javascript_Functions.csproj", "{550AB723-1A13-4CDC-BB88-E2047041FAE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_Javascript_Loops", "6_Javascript_Loops\6_Javascript_Loops.csproj", "{AC341E50-E925-4E3A-BD5F-F7DA28917E8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550AB723-1A13-4CDC-BB88-E2047041FAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC341E50-E925-4E3A-BD5F-F7DA28917E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC341E50-E925-4E3A-BD5F-F7DA28917E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC341E50-E925-4E3A-BD5F-F7DA28917E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC341E50-E925-4E3A-BD5F-F7DA28917E8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

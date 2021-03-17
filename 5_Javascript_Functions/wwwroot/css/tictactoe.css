@@ -1,0 +1,38 @@
+﻿body, html {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #d64343;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: inline-block;
+    width: 300px;
+    margin: 25px auto;
+    background-color: #ccafaf;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #e7dada;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    line-height: 90px;
+    font-size: 40px;
+    color: #dedede;
+}
+
+#info {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    padding: 15px 0;
+}
