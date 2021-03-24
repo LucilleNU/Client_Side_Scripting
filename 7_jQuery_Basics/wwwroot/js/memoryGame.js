@@ -71,7 +71,9 @@ function OpenCard() {
 			setTimeout(function () {
 				$(Source + " div").bind("click", OpenCard)
 			}, 300);
-		} else {
+		}
+
+		else {
 			CurrentOpened = $("#" + id + " img").attr("src");
 			if (ImgOpened != CurrentOpened) {
 				setTimeout(function () {
@@ -80,7 +82,9 @@ function OpenCard() {
 					BoxOpened = "";
 					ImgOpened = "";
 				}, 400);
-			} else {
+			}
+
+			else {
 				$("#" + id + " img").parent().css("visibility", "hidden");
 				$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
 				ImgFound++;
