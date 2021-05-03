@@ -1,0 +1,212 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 18px Verdana;
+    color: #FFF;
+    background: #CCC;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 85%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
+}
+
+    .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .popup .close, #closemenu {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+        .popup .close:hover #closemenu :hover {
+            color: #E5F720;
+        }
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+#closemenu {
+    display: none;
+}
+
+.radio {
+    margin-top: -10px;
+    font-family: Arial;
+    display: inline-flex;
+    font-size: 18px;
+}
+
+.form {
+    display: none;
+}
+
+    /*.form.vis {
+        visibility: visible;
+        display: inline-flex;
+        margin: -18px 27px;
+    }*/
+
+#picbox {
+    margin: 0px auto;
+    width: 640px;
+    padding: 1px;
+    
+}
+#boxbuttons div {
+    display: inline-block;
+}
+
+#boxcard {
+    z-index: 1;
+    margin: 10px 0 0;
+}
+
+    #boxcard div {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        padding: 5px;
+        border: 4px solid #EE872A;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px rgba(0,0,0,.5);
+        background: #B1B1B1;
+        z-index: 2;
+    }
+
+        #boxcard div img {
+            display: none;
+            border-radius: 10px;
+            z-index: 3;
+            -webkit-user-select: none;
+            margin: auto;
+            background-color: hsl(0, 0%, 90%);
+            transition: background-color 300ms;
+        }
+
+#boxbuttons {
+    text-align: center;
+    margin: 20px;
+    display: block;
+}
+
+    #boxbuttons .button {
+        text-transform: uppercase;
+        background: #EE872A;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+        #boxbuttons .button:hover {
+            background: #999;
+        }
+
+
+/*
+ * Styles for the Score Panel
+ */
+.score-panel {
+    text-align: left;
+    margin-bottom: 10px;
+    display: inline;
+}
+
+    .score-panel .restart {
+        float: right;
+        cursor: pointer;
+    }
+
+    .score-panel .home {
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+.moves {
+    display: none;
+}
+
+.timer {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+/*players*/
+
+.players {
+    display: flex;
+}
+
+.name-score {
+    display: none;
+    margin: 0px 5px
+}
+
+.name {
+    font-size: 13px;
+    margin: 5px;
+    display: inline;
+}
+
+.player, .score {
+    width: 150px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+.score {
+    width: 70px;
+}
+
+.name.turn {
+    border: 2px solid #fee949;
+    border-radius: 7px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 10px #fee949;
+    -moz-box-shadow: 0px 0px 10px #fee949;
+    box-shadow: 0px 0px 10px #fee949;
+}
