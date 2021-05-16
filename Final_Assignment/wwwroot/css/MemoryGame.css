@@ -47,12 +47,12 @@ body {
     transform: scale(1);
     transform-style: preserve-3d;
 }
-    .board .card.show {
+    .card.show {
         transform: scale(.97);
         transition: transform .2s;
     }
 
-    .board .card.open {
+    .card.open {
         transform: rotateY(180deg);
         cursor: default;
     }
@@ -91,6 +91,7 @@ body {
 
 .front {
     transform: rotateY(180deg);
+    visibility: visible;
 }
 
 @media (max-width: 320px) {
@@ -181,7 +182,6 @@ body {
         width: 85%;
         position: relative;
         transition: all 5s ease-in-out;
-        /*font-family: 'Gloria Hallelujah', cursive;*/
     }
 
         .popup h2 {
@@ -214,6 +214,7 @@ body {
         display: none;
     }
 
+
     .radio {
         margin-top: -10px;
         font-family: Arial;
@@ -230,6 +231,25 @@ body {
             display: inline-flex;
             margin: -18px 27px;
         }
+.congrats {
+    display: inline;
+    margin: 0;
+}
+
+/*.youwinner.show {
+    display: none;
+}*/
+
+
+#congrats2 {
+    display: inline-flex;
+    margin: 0;
+}
+
+#playername {
+    margin: 0 20px;
+}
+
     /*
  * Styles for the Score Panel
  */
@@ -252,11 +272,6 @@ body {
 
     .moves {
         display: none;
-    }
-
-    .timer {
-        display: inline-block;
-        margin: 0 1rem;
     }
 
     /*players*/

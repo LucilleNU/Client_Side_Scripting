@@ -2,10 +2,10 @@
 let matchedCard = document.getElementsByClassName("match");
 let closeicon = document.querySelector(".close");
 let closemenu = document.getElementById("closemenu");
-let modal = document.getElementById("popup1")// declare modal
+//let modal = document.getElementById("popup1")// declare modal
 const board = document.getElementById("boxcard");
 let cards = document.querySelectorAll(' .board .card');
-let congrats = document.getElementById("popup1")
+let endmenu = document.getElementById("popup1")
 let hasFlipedCard = false;
 let firstCard, secondCard;
 let images = document.getElementsByClassName("front");
@@ -138,6 +138,7 @@ for (var i = 0; i < options.length; i++) {
 }
 
 //change playground images theme, based on user's choice
+
 function Theme() {
 	var Theme = [];
 
@@ -166,15 +167,13 @@ function shuffle(cards) {
 	});
 };
 
-function StartGame()
-{
+function StartGame() {
 	hasFlipedCard = false;
 	document.getElementById("namescore1").style.display = "block";
 	GetPlayersName();
 	startmenu.classList.remove("show");
 
-
-	playerScore1.value = 0; 
+	playerScore1.value = 0;
 	for (var i = 0; i < PlayersPoints.length; i++) {
 		PlayersPoints[i].Points = 0;
 		Score[i].value = 0;
@@ -184,8 +183,6 @@ function StartGame()
 	PlayersPoints[0].Player.classList.add("turn");
 	currentPlayer = PlayersPoints[0].Player;
 	turn = 1;
-
-
 
 	$(board).css({ "visibility": "visible" }); //display playground
 
@@ -197,6 +194,7 @@ function StartGame()
 	shuffle(cards);
 
 	// remove all exisiting classes from each card
+
 	for (var i = 0; i < cards.length; i++) {
 		board.innerHTML = "";
 		[].forEach.call(cards, function (item) {
@@ -209,24 +207,25 @@ function StartGame()
 	}
 }
 
-//check if card open and make it first or second card
 
-function flipCard() {
-	this.classList.toggle("open");
-	this.classList.toggle("show");
-	this.classList.toggle("disabled");
+for (var i = 0; i < cards.length; i++) {
+    cards.item(i).addEventListener("click", function () {
+		this.classList.toggle("open");
+		this.classList.toggle("show");
+		this.classList.toggle("disabled");
 
-	if (!hasFlipedCard) {
-		hasFlipedCard = true;
-		firstCard = this;
-	}
-	else {
-		disablePlayGround();
-		hasFlipedCard = false;
-		secondCard = this;
-		checkForMatch(firstCard);
-		moveCounter();
-	}
+		if (!hasFlipedCard) {
+			hasFlipedCard = true;
+			firstCard = this;
+		}
+		else {
+			disablePlayGround();
+			hasFlipedCard = false;
+			secondCard = this;
+			checkForMatch(firstCard);
+			moveCounter();
+		}
+    });
 }
 
 function checkForMatch() {
@@ -282,7 +281,7 @@ function disablePlayGround() {
 		card.classList.add("disableplayground");
 	}
 }
-//unblock plauground
+//unblock playground
 function AblePlayGround() {
 	for (var c = 0; c < cards.length; c++) {
 		card = cards[c];
@@ -290,7 +289,6 @@ function AblePlayGround() {
 		card.classList.remove("disableplayground");
 	}
 }
-
 
 //enable cards and disable matched cards
 function enable() {
@@ -327,7 +325,7 @@ function moveCounter() {
 	}
 }
 
-//congratulations when all cards match, show modal and moves, time and rating
+//congratulations when all cards match
 function congratulations() {
 	if (matchedCard.length == 20) {
 		var b = 0;
@@ -336,17 +334,73 @@ function congratulations() {
 			b++
 		}
 
-		clearInterval(interval);
-		finalTime = timer.innerHTML;
+		endmenu.classList.add("show"); // show congratulations popup
 
-		congrats.classList.add("show"); // show congratulations popup
+		document.getElementById("youwinner").classList.add("show");
+		
+		//1 player mode
+		if (chosen == 1) {
+			document.getElementById("finalMove").innerHTML = moves;
+			document.getElementById("playername").innerHTML = names[0].innerHTML + "!";
 
+			document.getElementById("winner").style.display = "none";
+
+			document.getElementById("congrats2").style.display = "none";
+		}
+		//multiplayer mode
+		else {
+			document.getElementById("youwinner").classList.add("show");
+			document.getElementById("loserscore").style.display = "inline-flex";
+
+			document.getElementById("finalMove").style.display = "none";
+			document.getElementById("movescount").style.display = "none";
+
+			let SortedPlayersPoints = [];//storage for sorted player-points array in descending order
+
+			for (let i = 0; i < 4; i++) {
+				SortedPlayersPoints[i] = { Points: Score[i].value, Name: PlayersPoints[i].Player.innerHTML };
+			}
+			SortedPlayersPoints = SortedPlayersPoints.sort(function (a, b) { return b.Points - a.Points });
+
+			if (SortedPlayersPoints[0].Points == SortedPlayersPoints[chosen - 1].Points) {  // if all equals
+				document.getElementById("congrats2").style.display = "inline-flex"; //if draw game
+				document.getElementById("congrats1").style.display = "none";
+				document.getElementById("loserscore").style.display = "none";
+			}
+			else {
+				document.getElementById("congrats2").style.display = "none";
+				document.getElementById("congrats1").style.display = "inline-flex";
+				let Winners = SortedPlayersPoints[0].Name; //player with biggest amount of points (first winner)
+				//if not 1 winner
+				for (let i = 1; i < chosen; i++) {
+					if (SortedPlayersPoints[i].Points == SortedPlayersPoints[0].Points) {
+						Winners += ", " + SortedPlayersPoints[i].Name;
+						document.getElementById("youwinner").innerHTML = "You're winners! 🎉🎉";
+					} else break;
+				}
+				Winners += "!";
+				document.getElementById("playername").innerHTML = Winners;
+			}
+		}
+		close();
 	}
+
 }
 
 function close() {
 	closeicon.addEventListener("click", function (e) {
-		startmenu.classList.remove("show");
-		StartGame();
+		endmenu.classList.remove("show");
+		StartMenu(0);
 	});
 }
+
+function playAgain() {
+	endmenu.classList.remove("show");
+	StartMenu(0);
+}
+
+
+	for (var i = 0; i < cards.length; i++) {
+		card = cards[i];
+		card.addEventListener("click", congratulations);
+	}
